@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Chat application</title>
+		<link rel="stylesheet" type="text/css" href="dist/BScss/bootstrap.css">
+		<script type="text/javascript" src="dist/BSjs/bootstrap.bundle.js"></script>
+		<link rel="stylesheet" href="dist/css/estilos.css">
+	</head>
+	<body>
+
+		<div class="container">
+			<div id="contentRegistro" class="row m-0 my-5 justify-content-center">
+				<div class="col-4 border p-4 mt-5">
+					<h3>Información <span id="span_form_usuario" class="text-primary"> Usuario 1 </span> </h3>
+
+					<label class="d-block mt-3" for="campo_nick_name">Nickname: </label>
+					<input class="form-control" id="campo_nick_name" type="text" name="campo_nick_name">
+
+					<label class="d-block mt-3" for="campo_imagen">Url imagen:</label>
+					<input class="form-control" id="campo_imagen" type="url" name="campo_imagen">
+
+					<div class="row justify-content-center">
+						<button id="btn_continuar" onclick="enviarDatos();" class="col-6 btn btn-primary mt-3">ENVIAR</button>
+					</div>
+				</div>
+			</div>
+			<div id="contentChat" style="display:none;">
+				<div class="row m-0 my-5 justify-content-center">
+					<div id="container__chat" class="col-8 border p-3 px-5" style="overflow-y: auto; height: 85vh;">
+						<h4>Conversación:</h4>
+						<hr>
+					</div>
+					<div class="col-4">
+						<div class="border p-4">
+							<h3 id="h3_usuario_1"></h3>
+
+							<label class="d-block mt-3" for="campo_mensaje_user_1">Mensaje: </label>
+							<textarea class="form-control" id="campo_mensaje_user_1" type="text" name="campo_mensaje_user_1"></textarea>
+
+							<div class="row justify-content-center">
+								<button id="btn_enviar_user_1" onclick="enviarMensajeUser1();" class="col-6 btn btn-primary mt-3">ENVIAR</button>
+							</div>
+						</div>
+
+						<div class="border p-4 mt-4">
+							<h3 id="h3_usuario_2"></h3>
+
+							<label class="d-block mt-3" for="campo_mensaje_user_2">Mensaje: </label>
+							<textarea class="form-control" id="campo_mensaje_user_2" type="text" name="campo_mensaje_user_2" readonly></textarea>
+
+							<div class="row justify-content-center">
+								<button id="btn_enviar_user_2" onclick="enviarMensajeUser2();" class="col-6 btn btn-primary mt-3">ENVIAR</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="dist/js/script_chat.js"></script>
+	</body>
+</html>

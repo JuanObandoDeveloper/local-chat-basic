@@ -1,0 +1,16 @@
+textarea{
+    resize: none !important;
+}
+.texto{
+    word-break: break-all;
+}
+.texto2{
+    word-break: break-all;
+    text-align: right !important;
+}
+section{
+    border-top: 1px solid #bbb;
+}
+section p{
+    color: #bbb;
+}
